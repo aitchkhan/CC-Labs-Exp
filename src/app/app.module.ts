@@ -1,24 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
-//custom modules
-import { AngularMaterialModule } from 'app/shared/angular-material/angular-material.module';
 
+/*
+App Modules
+*/ 
+import { SharedModule } from './shared/shared.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { ChatModule } from "./modules/chat/chat.module";
+
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+//root component
 import { AppComponent } from './app.component';
+/**
+ * application routes
+ */
+
+import { appRoutes } from "./routes/app.routes";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent,
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
-    FormsModule,
-    HttpModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    SharedModule,
+    DashboardModule,
+    ChatModule
   ],
   providers: [],
   bootstrap: [AppComponent]

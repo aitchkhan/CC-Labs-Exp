@@ -1,0 +1,50 @@
+md-sidenav, md-sidenav.md-locked-open, md-sidenav.md-closed.md-locked-open-add-active {
+ min-width: 300px !important;
+ width: 50vw !important;
+ max-width: 200px !important;
+ background-color: #313b3f;
+}
+
+ul.sidebar-menu {
+  padding-left: 0;
+}
+
+ul.sidebar-menu li {
+  list-style: none;
+  border-top: 1px solid #404a4e;
+  height: 39px;
+  padding: 15px 0px 0px 27px;
+}
+
+ul.sidebar-menu a {
+  text-decoration: none;
+  color: #9ba5ac;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+ul.sidebar-menu a:hover {
+  color: #20282b;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.sidebar-menu img {
+  width: 30px;
+  height: auto;
+  float: left;
+  margin-right: 24px;}
+
+#menu-search {
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 7px;
+  background-color: #313b3f;
+}
+
+.content {
+  background-color: #eff3f6;
+}
