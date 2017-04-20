@@ -1,0 +1,6 @@
+<div class="chat-bubble" [ngClass]="{'chat-bubble-sent tri-right right-in': msg.sender === 0, 
+  'chat-bubble-received tri-right left-top': msg.sender === 1}">
+  <p>
+    {{msg.text}}
+  </p>
+</div>

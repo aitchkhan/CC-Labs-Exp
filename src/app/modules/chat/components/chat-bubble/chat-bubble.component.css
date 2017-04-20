@@ -1,0 +1,69 @@
+.chat-bubble {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 20px;
+  border: 1px solid transparent;
+  border-radius:4px;
+  position: relative;
+  padding: 5px;
+}
+
+.chat-bubble-received {
+  background-color: #FFFFFF;
+}
+
+.chat-bubble-sent {
+  background-color: #cfd8dc
+}
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after {
+	content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -7px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 9px solid;
+    border-color: #FFFFFF transparent transparent transparent;
+}
+
+/* Right triangle, right side slightly down*/
+.tri-right.border.right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -40px;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+.tri-right.right-in:after{
+	content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -6px;
+    top: 0px;
+    bottom: auto;
+    border: 8px solid;
+    border-color: #cfd8dc transparent transparent #cfd8dc;
+}

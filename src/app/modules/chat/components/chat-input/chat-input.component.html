@@ -1,0 +1,11 @@
+<div class="input-container">
+  <form [formGroup]='chatMsgForm' autocomplete="off" novalidate>
+    <div class="text-field">
+   
+        <input class='msg' type="text" placeholder="Say something and witness the charm..." formControlName='message' />
+   
+        <button md-raised-button (click)='submitForm()'><md-icon>send</md-icon></button>
+      
+    </div>
+  </form>
+</div>

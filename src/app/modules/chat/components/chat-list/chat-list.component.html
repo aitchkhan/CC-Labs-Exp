@@ -1,0 +1,7 @@
+<div>
+  <ul class="chat-list" fxLayout= "column">
+    <li fxFlexAlign="{{ message.sender == 0 ? 'end' : 'start' }}" *ngFor="let message of messages">
+      <chat-bubble [msg]='message'></chat-bubble>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,38 @@
+.input-container {
+  margin-top: 250px;
+  /*box-sizing: border-box;*/
+}
+
+div.input-container .msg {
+  padding: 8px;
+  width: 90%;
+  background-color: #FFFFFF
+}
+
+div.input-container button {
+  padding: 0px;
+  width: 8%;
+  background-color: #FFFFFF
+}
+
+form ul {
+  list-style: none;
+  padding-left: 0px;
+}
+form ul li{
+  padding-left: 0px;
+}
+
+.msg.ng-invalid:focus{
+  outline: 1px solid red;
+}
+
+.text-field input{
+  float: left;
+  width: 85% !important;
+}
+
+.text-field button{
+  float: right;
+  width: 15%;
+}

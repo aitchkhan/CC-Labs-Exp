@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
@@ -12,7 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { ChatModule } from "./modules/chat/chat.module";
 
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './routes/page-not-found/page-not-found.component';
 //root component
 import { AppComponent } from './app.component';
 /**

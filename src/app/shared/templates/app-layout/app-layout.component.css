@@ -47,4 +47,5 @@ ul.sidebar-menu a:hover {
 
 .content {
   background-color: #eff3f6;
+  height: inherit;
 }
