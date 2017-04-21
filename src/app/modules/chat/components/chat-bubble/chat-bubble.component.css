@@ -31,15 +31,15 @@
 }
 .tri-right.left-top:after {
 	content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: -7px;
-    right: auto;
-    top: 0px;
-    bottom: auto;
-    border: 9px solid;
-    border-color: #FFFFFF transparent transparent transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -7px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 9px solid;
+  border-color: #FFFFFF transparent transparent transparent;
 }
 
 /* Right triangle, right side slightly down*/
@@ -55,15 +55,16 @@
 	border: 20px solid;
 	border-color: #666 transparent transparent #666;
 }
+
 .tri-right.right-in:after{
 	content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: auto;
-    right: -6px;
-    top: 0px;
-    bottom: auto;
-    border: 8px solid;
-    border-color: #cfd8dc transparent transparent #cfd8dc;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -6px;
+  top: 0px;
+  bottom: auto;
+  border: 9px solid;
+  border-color: #cfd8dc transparent transparent #cfd8dc;
 }

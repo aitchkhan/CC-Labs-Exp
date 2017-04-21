@@ -1,9 +1,9 @@
-<div class="flexDemoContainer" > 
+<div class='chat-window-container' fxLayout='column' fxFlexAlign="center"> 
   <div class="message-list">
     <chat-list [messages]='messagesList'>
     </chat-list>
   </div>
-  <div class="chat-input">
+  <div class="chat-input" >
     <chat-input [message]='newMessage' (onNewMessage)='onEnter($event)'></chat-input>
   </div>
 </div>
