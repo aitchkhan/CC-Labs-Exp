@@ -6,6 +6,13 @@ import { DashboardMainComponent } from './routes/dashboard-main/dashboard-main.c
 
 import { dashboardRoutes } from './dashboard.routes';
 import { DashboardStatsComponent } from './routes/dashboard-stats/dashboard-stats.component';
+import { DashboardClassifierComponent } from './routes/dashboard-classifier/dashboard-classifier.component';
+import { DashboardComponent } from './dashboard.component';
+import { ClassifierResultComponent } from './components/classifier-result/classifier-result.component';
+import { ClassifierWindowComponent } from './components/classifier-window/classifier-window.component';
+import { ClassifierPictureComponent } from './components/classifier-picture/classifier-picture.component';
+import { ClassifierUploadButtonComponent } from './components/classifier-upload-button/classifier-upload-button.component';
+
 
 @NgModule({
   imports: [
@@ -13,6 +20,6 @@ import { DashboardStatsComponent } from './routes/dashboard-stats/dashboard-stat
     SharedModule,
     RouterModule.forChild(dashboardRoutes)
   ],
-  declarations: [DashboardMainComponent, DashboardStatsComponent]
+  declarations: [DashboardMainComponent, DashboardStatsComponent, DashboardClassifierComponent, DashboardComponent, ClassifierResultComponent, ClassifierWindowComponent, ClassifierPictureComponent, ClassifierUploadButtonComponent]
 })
 export class DashboardModule { }
