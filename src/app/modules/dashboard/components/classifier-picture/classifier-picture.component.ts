@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'classifier-picture',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./classifier-picture.component.css']
 })
 export class ClassifierPictureComponent implements OnInit {
-
+  @Input() imageSrc: File;
   constructor() { }
 
   ngOnInit() {

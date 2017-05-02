@@ -13,6 +13,12 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { ChatModule } from "./modules/chat/chat.module";
 
 import { PageNotFoundComponent } from './routes/page-not-found/page-not-found.component';
+
+/**
+ * Services
+ */
+
+import { HttpService } from "./services/http.service";
 //root component
 import { AppComponent } from './app.component';
 /**
@@ -27,14 +33,14 @@ import { appRoutes } from "./routes/app.routes";
     PageNotFoundComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {useHash: true}),
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
     DashboardModule,
     ChatModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

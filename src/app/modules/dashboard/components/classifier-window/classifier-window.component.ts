@@ -1,3 +1,4 @@
+import { ClassifierUploadButtonComponent } from '../classifier-upload-button/classifier-upload-button.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./classifier-window.component.css']
 })
 export class ClassifierWindowComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit() {
   }
 
+  uploadImg : File = null;
+  
+  onSelectImg = function(img: File) {
+    this.uploadImg = img;
+  }
 }

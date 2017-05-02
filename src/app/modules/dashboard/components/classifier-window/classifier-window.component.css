@@ -1,0 +1,16 @@
+.classifier-container {
+  border: 1px solid;
+  margin: auto;
+}
+
+#picture {
+  border: 1px solid;
+}
+
+#upload-button {
+  border: 1px solid;  
+}
+
+#result {
+    border: 1px solid;
+}
