@@ -33,7 +33,6 @@ export class ChatWindowComponent implements OnInit {
 
 
   onEnter(m: Message) {
-    console.log(m)
     this.messagesList.push(m);
   }
 
