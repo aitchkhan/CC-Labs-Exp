@@ -46,6 +46,26 @@ ul.sidebar-menu a:hover {
 }
 
 .content {
-  background-color: #eff3f6;
+  background-color: #fff;
   height: 100%;
+}
+
+.chat-window > div > .panel {
+    border-radius: 5px 5px 0 0;
+}
+
+.panel-default {
+    border-color: #ddd;
+}
+
+.fa {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
