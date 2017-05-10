@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { Message } from "../../models/message";
+import { Message } from '../../models/message';
 @Component({
   selector: 'chat-input',
   templateUrl: './chat-input.component.html',
@@ -12,19 +12,19 @@ export class ChatInputComponent implements OnInit {
   @Input() message: Message;
   @Output() onNewMessage: EventEmitter<Message> = new EventEmitter();
 
-  constructor() { 
+  constructor() {
     this.chatMsgForm = new FormGroup({
       message: new FormControl('', [
         Validators.required
-      ])  
+      ])
     });
    }
 
    botMessages : Array<Message>= [
-     new Message({sender: 1, text: 'Oh, I dont know the answer'}), 
-     new Message({sender: 1, text: 'yes, you are right'}), 
-     new Message({sender: 1, text: 'Whats wrong with you?'}), 
-     new Message({sender: 1, text: 'Oh, I dont know them'}), 
+     new Message({sender: 1, text: 'Oh, I dont know the answer'}),
+     new Message({sender: 1, text: 'yes, you are right'}),
+     new Message({sender: 1, text: 'Whats wrong with you?'}),
+     new Message({sender: 1, text: 'Oh, I dont know them'}),
      new Message({sender: 1, text: 'hello, I am a dumb bot!! :)'})
   ];
 
@@ -34,8 +34,8 @@ export class ChatInputComponent implements OnInit {
     this.onNewMessage.emit(new Message({text: this.chatMsgForm.value.message, sender: 0}));
     this.onNewMessage.emit(new Message(this.botMessages[Math.floor(Math.random() * 4) + 1 ]));
 
-    this.chatMsgForm.reset();    
-  }
+    this.chatMsgForm.reset();
+  };
   ngOnInit() {
   }
 

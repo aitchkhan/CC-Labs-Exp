@@ -1,4 +1,4 @@
-/*.flexDemoContainer {
+/*.flexDemopanel-container {
   border: solid 1px red;
   box-sizing: content-box !important;
 }*/
@@ -151,4 +151,9 @@ img {
     border-bottom: 1px solid transparent;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
+}
+
+.msg-container-base {
+    position: relative;
+    bottom: 0;
 }

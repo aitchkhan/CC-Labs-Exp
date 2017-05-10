@@ -1,12 +1,17 @@
 import { RequestOptions, RequestMethod, Headers, Request, Http } from '@angular/http';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { FileUploader } from "ng2-file-upload";
 
+// const URL = '/api/';
+const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
 @Component({
   selector: 'classifier-upload-button',
   templateUrl: './classifier-upload-button.component.html',
   styleUrls: ['./classifier-upload-button.component.css']
 })
 export class ClassifierUploadButtonComponent implements OnInit {
+  public uploader: FileUploader = new FileUploader({url: URL})
+
   @Output() onSelectImgSrc : EventEmitter<File> = new EventEmitter();
   constructor(private http: Http) { }
 
@@ -15,18 +20,18 @@ export class ClassifierUploadButtonComponent implements OnInit {
 
   file_src;
   fileChange (input) {
-    let files : FileList = input.target.files;
-    this.readFile(files)
+    const files : FileList = input.target.files;
+    this.readFile(files);
   }
 
   readFile (files) {
     console.log(files[0]);
-    let reader = new FileReader();
+    const reader = new FileReader();
 
     reader.onload = () => {
       this.file_src = reader.result;
       this.onSelectImgSrc.emit(reader.result);
-    }
+    };
     reader.readAsDataURL(files[0]);
   }
   /*fileChange(event) {
@@ -37,7 +42,7 @@ export class ClassifierUploadButtonComponent implements OnInit {
       let file : File  = fileList[0];
     formData.append('uploadFile', file, file.name);
     formData.append('title', 'Awesome Ferrari')
-    formData.append('type', '0'); 
+    formData.append('type', '0');
     formData.append('userId', '58660db4988168ffbd5aa414');
 
     let headers = new Headers();
@@ -47,9 +52,9 @@ export class ClassifierUploadButtonComponent implements OnInit {
     headers.set('clientId', 'androidApp');
     headers.set('clientSecret', 'androidSecret');
     headers.set('accessToken', 'EAAXZA4giEFwwBAKZA9y2cVfBQgc5UaknkhN2C8ljoZCh3DwpuEoSLZAFzIfQoVZCH3xOXzLgHfZC75fBqQgeCyvstsMHovgypz0HUZA0ARUndItAVoTTsAXrwxhlM1RwKgayDzAyxGv01ED31ZBu790hbRpebXGcGYdHZBEubQ0Bf6oZB3R7OBZC1dUoofzeSB28McQlZAjma3RndpDhi5jxrunXBJZAxQu6tuU4ZD');
-  
+
   console.log(headers)
-    let options = new RequestOptions({ 
+    let options = new RequestOptions({
       headers : headers
     });
 
@@ -59,9 +64,9 @@ export class ClassifierUploadButtonComponent implements OnInit {
       .subscribe(data => console.log(data))
      //var req = new Request(options);
     }
-   
+
   }*/
 
-  
+
 
 }

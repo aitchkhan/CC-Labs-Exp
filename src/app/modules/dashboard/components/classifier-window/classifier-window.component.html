@@ -1,5 +1,12 @@
-<div class="classifier-container" fxLayout="row" fxLayoutAlign="center center">
-  <classifier-picture id="picture" [imageSrc]="uploadImg"></classifier-picture>
-  <classifier-upload-button id="upload-button" (onSelectImgSrc)="onSelectImg($event)"></classifier-upload-button>
-  <classifier-result id="result" ></classifier-result>
+<div class="classifier-container container">
+  <h2 class="text-center">Classifier</h2>
+  <div class="row">
+    <classifier-picture id="picture" [imageSrc]="uploadImg"></classifier-picture>
+  </div>
+  <div class="col-lg-1">
+    <classifier-upload-button id="upload-button" (onSelectImgSrc)="onSelectImg($event)"></classifier-upload-button>    
+  </div>
+  <!--<div class="col-lg-1">
+    <classifier-result id="result" ></classifier-result>  
+  </div>-->
 </div>

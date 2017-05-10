@@ -6,12 +6,12 @@ import { DashboardClassifierComponent } from './routes/dashboard-classifier/dash
 
 
 export const dashboardRoutes: Routes = [
-  { 
+  {
     path: 'dashboard', children: [
       { path: '', pathMatch: 'full', component: DashboardMainComponent },
       { path: 'stats', component: DashboardStatsComponent },
       { path: 'classifier', component: DashboardClassifierComponent }
     ]
   }
-  
-]
+
+];

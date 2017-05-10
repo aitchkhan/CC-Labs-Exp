@@ -10,6 +10,6 @@ export class Message {
   } = {}) {
     this.id = options.id || 0;
     this.text = options.text || '',
-    this.sender = options.sender || 0; 
+    this.sender = options.sender || 0;
   }
 }

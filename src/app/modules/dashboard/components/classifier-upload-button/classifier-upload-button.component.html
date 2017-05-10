@@ -1,6 +1,6 @@
 <div>
-  <input  type="file" name="" (change)="fileChange($event)" placeholder="Upload photo" 
-    value="" accept=".png, .jpg, .jpeg" />
-  <!--<button md-raised-button>Upload File</button>  -->
+  <!--<input class="btn btn-default"type="file" name="" (change)="fileChange($event)" placeholder="Upload photo" 
+    value="" accept=".png, .jpg, .jpeg" />-->
+    <input type="file" ng2FileSelect [uploader]="uploader" />
 
 </div>

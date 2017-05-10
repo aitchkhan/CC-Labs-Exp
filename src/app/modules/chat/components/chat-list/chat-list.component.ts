@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Message } from "../../models/message";
+import { Message } from '../../models/message';
 
 @Component({
   selector: 'chat-list',
@@ -13,6 +13,6 @@ export class ChatListComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
 
 }

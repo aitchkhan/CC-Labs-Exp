@@ -1,22 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Message } from "../../models/message";
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { Observable } from 'rxjs';
+import { Message } from '../../models/message';
 
 @Component({
   selector: 'chat-window',
   templateUrl: './chat-window.component.html',
-  styleUrls: ['./chat-window.component.css']
+  styleUrls: ['./chat-window.component.css'],
+  animations: [
+    trigger('slidePanel', [
+     state('collapsed', style({
+        bottom: -200
+     })),
+     state('expanded', style({
+       bottom: 0
+     })),
+     transition('expanded => collapsed', animate('0.5s forwards', keyframes([
+       style({ bottom: -200 }),
+     ])))
+
+    ])
+  ]
 })
 export class ChatWindowComponent implements OnInit {
   messagesList: Array<Message> = [];
   newMessage: Message = new Message();
-  constructor() {
+  slideState = 'expanded';
+  constructor(public el: ElementRef) {
    }
 
   ngOnInit() {
-    var i: number = 0;
-    for(i = 0; i < 3; i++) {
-      if(i % 2 == 0) {
+    let i = 0;
+    for (i = 0; i < 2; i++) {
+      if (i % 2 == 0) {
         this.messagesList.push(new Message({
           text: 'Hey from the user',
           sender: 0
@@ -28,14 +44,29 @@ export class ChatWindowComponent implements OnInit {
           sender: 1
         }));
       }
-    } 
-  }
+    }
 
+
+  }
 
   onEnter(m: Message) {
     this.messagesList.push(m);
+    setTimeout( () => {
+      this.scrollToBottom();
+    });
   }
 
+  scrollToBottom(): void {
+    const scrollPane: any = this.el
+      .nativeElement.querySelector('.msg-container-base');
+    scrollPane.scrollTop = scrollPane.scrollHeight;
+  }
+
+  toggleWindow(): void {
+
+    this.slideState = (this.slideState == 'expanded') ? 'collapsed' : 'expanded';
+    console.log(this.slideState);
+  }
 
 //   $(document).on('click', '.panel-heading span.icon_minim', function (e) {
 //     var $this = $(this);
