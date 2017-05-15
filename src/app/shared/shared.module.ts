@@ -8,6 +8,7 @@ import { MaterialRootModule }from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { AppLayoutComponent } from './templates/app-layout/app-layout.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FileUploadModule } from "ng2-file-upload";
 
 
 
@@ -20,7 +21,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RouterModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FileUploadModule
   ],
   exports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppLayoutComponent,
     FlexLayoutModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FileUploadModule
   ],
   declarations: [AppLayoutComponent]
 })

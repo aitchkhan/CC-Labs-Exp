@@ -29,7 +29,7 @@ import { appRoutes } from './routes/app.routes';
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {useHash: true}),
